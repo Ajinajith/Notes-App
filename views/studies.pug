@@ -1,0 +1,13 @@
+extends layout
+block content
+        h1 studies 
+        form(action="/users/studiesposting" , method="post")
+                label(for="title") title
+                input(type="text" id="title" name="title" )
+    
+                label(for="content") note
+                input(type="text" id="content" name="content" )
+
+                input(type="text" id="category" name="category" value="study" hidden)
+
+                button(type="submit") submit

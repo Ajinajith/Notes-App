@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1 Sign Up
+  form(action="create" method="POST")
+    label(for="firstname") Firstname:
+    input(type="text" id="firstname" name="firstname" )
+    br
+    label(for="lname") Lastname:
+    input(type="text" id="lastname" name="lastname" )
+    br
+    label(for="gender") gender:
+    input(type="text" id="gender" name="gender" )
+    br
+    label(for="email") email:
+    input(type="text" id="email" name="email" )
+    br
+    label(for="email") phone:
+    input(type="text" id="phone" name="phone" )
+    br
+    label(for="name") UserName:
+    input(type="text" id="username" name="username" )
+    br
+    label(for="phone") Password:
+    input(type="text" id="pwd" name="password" )
+    br
+    label(for="dob") dob:
+    input(type="date" id="dob" name="dob" )
+    br
+    label(for="photo") photo:
+    input(type="file" id="photo" name="photo" )
+    br
+    button(type="submit") Sign Up

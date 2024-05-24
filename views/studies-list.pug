@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  div.container
+    h1 Welcome #{userdata}
+    table.table.table-striped.table-hover.table-dark
+      thead
+        tr
+          th Title
+          th Content 
+          th Actions
+      tbody
+        each note in notes
+          tr
+            td= note.title
+            td= note.content
+            td
+              a.btn.btn-primary(href=`/user/${note.id}/update`) Edit
+              form(action=`/user/${note.id}/delete` method="POST")
+                button.btn.btn-danger(type="submit") Delete
+    a.btn.btn-primary(href=`/users/${data.userid}/mytask`) View My Task
+    a.btn.btn-primary(href='/') Back
+    a.btn.btn-danger(href="/users/user-logout") Logout
